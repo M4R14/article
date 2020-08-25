@@ -1,0 +1,54 @@
+{
+    "name": "m4r14/article",
+    "description": "",
+    "keywords": [
+        "m4r14",
+        "article"
+    ],
+    "homepage": "https://github.com/m4r14/article",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "vachirawit laolod",
+            "email": "gm_37@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "M4R14\\Article\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "M4R14\\Article\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "M4R14\\Article\\ArticleServiceProvider"
+            ],
+            "aliases": {
+                "Article": "M4R14\\Article\\ArticleFacade"
+            }
+        }
+    }
+}
